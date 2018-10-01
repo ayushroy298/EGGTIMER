@@ -18,9 +18,9 @@ public class MainActivity extends AppCompatActivity
         String t;
         int min=n/60,sec=n%60;
         if(min>9)
-            t= Integer.toString(min) + ":";
+            t= Integer.toString(min) + " : ";
         else
-            t= "0" + Integer.toString(min) + ":";
+            t= "0" + Integer.toString(min) + " : ";
         if(sec>9)
             t+= Integer.toString(sec);
         else
@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity
                     button.setText("Go!!");
                     isActive=false;
                     seekBar.setEnabled(true);
-                    seekBar.setProgress(30);
-                    textView.setText(time(30));
+                    seekBar.setProgress(60);
+                    textView.setText(time(60));
                 }
             }.start();
 
@@ -71,8 +71,8 @@ public class MainActivity extends AppCompatActivity
             button.setText("Go!!");
             isActive=false;
             seekBar.setEnabled(true);
-            seekBar.setProgress(30);
-            textView.setText(time(30));
+            seekBar.setProgress(60);
+            textView.setText(time(60));
             countDownTimer.cancel();
         }
 
@@ -87,8 +87,8 @@ public class MainActivity extends AppCompatActivity
         textView=findViewById(R.id.textView);
         button=findViewById(R.id.button);
         seekBar.setMax(60);
-        seekBar.setProgress(30);
-        textView.setText(time(30));
+        seekBar.setProgress(60);
+        textView.setText(time(60));
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b)
