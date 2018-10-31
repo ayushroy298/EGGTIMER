@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity
     String time(int n)
     {
         String t;
-        int min=n/60,sec=n%60;
+        int min=n/60,sec=n%60,abc;
         if(min>9)
             t= Integer.toString(min) + " : ";
         else
